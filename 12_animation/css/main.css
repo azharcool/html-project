@@ -1,0 +1,76 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+main {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #aaa;
+  display: grid;
+  place-content: center;
+}
+
+div:first-child {
+  background-color: lime;
+  /* transform: translateX(-50%); */
+  /* transform: rotateX(180deg); */
+  /* transform: skewX(45deg); */
+}
+
+div:nth-child(2) {
+  background-color: dodgerblue;
+  /* transform: translateY(-2rem); */
+  /* transform: rotateY(180deg); */
+  /* transform: skewY(-45deg); */
+}
+
+div:last-child {
+  background-color: aqua;
+  /* transform: translate(50%, -50%); */
+  /* transform: skew(45deg); */
+}
+
+div:hover {
+  background-color: blueviolet;
+  transform: rotate(45deg);
+  /* transition-property: background-color, transform;
+    transition-duration: 2s;
+    transition-delay: 0.2s,0.8s;
+    transition-timing-function: linear; */
+  transition: all 2s linear 0.5s;
+}
+
+.animate {
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-timing-function: 1s;
+  animation-iteration-count: 3;
+ animation-direction: normal;
+ animation-fill-mode: backwards;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(300px);
+  }
+  66% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(0);
+    background-color: rebeccapurple;
+  }
+}

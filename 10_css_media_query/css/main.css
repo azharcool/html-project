@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General */
+body {
+  font: 1.5rem "Nunito", sans-serif;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 481px){
+    
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azhar Portfolio</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Portfolio</a>
+      <div class="menu-toggle"></div>
+      <nav>
+        <ul>
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <img src="img/azhar-pic.jpg" alt="azhar pic" class="profile" />
+      <div class="content">
+        <h2 class="wrap">Azhar 👋</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          sit, cupiditate neque numquam ad perspiciatis quis voluptate
+          voluptatum explicabo minima in libero. Est, cupiditate officia?
+        </p>
+        <a href="#" class="btn">Contact <Menu:toolbar></Menu:toolbar></a>
+      </div>
+    </section>
+    <section id="services">
+      <div class="section-text">
+        <h2>What I am great at</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quaerat
+          veniam mollitia itaque aperiam sapiente sequi excepturi fuga
+          exercitationem? Officiis accusantium ullam animi corrupti quibusdam?
+        </p>
+      </div>
+      <div class="content">
+        <div class="service-box">
+          <h3>Web Designing</h3>
+        </div>
+
+        <div class="service-box">
+          <h3>Web Development</h3>
+        </div>
+
+        <div class="service-box">
+          <h3>Android</h3>
+        </div>
+
+        <div class="service-box">
+          <h3>Video Editing</h3>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio">
+      <div class="section-text">
+        <h2>My Collections</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+          quas aliquam quaerat provident commodi sit rem harum incidunt facilis
+          sapiente. Dolorem itaque ipsum magni? Natus?
+        </p>
+      </div>
+      <div class="content">
+        <div class="image-box">box</div>
+        <div class="image-box">box</div>
+        <div class="image-box">box</div>
+        <div class="image-box">box</div>
+        <div class="image-box">box</div>
+        <div class="image-box">box</div>
+      </div>
+      <div class="center">
+        <a href="#" class="btn">View More</a>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="section-text">
+        <h2>Contact Me 📱</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+          odio? Dolores error vero ad nemo, cupiditate, laboriosam distinctio
+          laudantium dolorum, provident quos rem sit maxime.
+        </p>
+      </div>
+      <div class="content">
+        <div class="content-box">
+          <a href="tel:" class="wrap"
+            ><ion-icon name="mail-outline"></ion-icon>
+            azharuddinmullah219@gmail.com</a
+          >
+        </div>
+
+        <div class="content-box">
+          <a href="tel:"><ion-icon name="call-outline"></ion-icon>7721021511</a>
+        </div>
+
+        <div class="content-box">
+          <a href="tel:"> <ion-icon name="logo-whatsapp"></ion-icon>whatspp</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Copyright &copy; 2023
+
+        <a href="#"><em>azharuddinmullah219@gmail</em> </a>
+        All Right Reserved.
+      </p>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      const navList = document.querySelectorAll("nav ul li");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const header = document.querySelector("header");
+
+      function handleActive() {
+        navList.forEach((item) => {
+          item.classList.remove("active");
+          this.classList.add("active");
+          header.classList.remove("active");
+        });
+      }
+
+      navList.forEach((i) => i.addEventListener("click", handleActive));
+
+      menuToggle.onclick = function () {
+        header.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

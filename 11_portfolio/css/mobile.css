@@ -1,0 +1,160 @@
+/* Responsive */
+
+@media (max-width: 900px) {
+  body {
+    font-size: 8px;
+  }
+
+  header {
+    padding: 15px 50px;
+  }
+
+  #home {
+    padding: 70px 50px;
+    flex-direction: column;
+  }
+
+  #home .content {
+    align-items: center;
+    max-width: 500px;
+  }
+
+  #home .content h2 {
+    font-size: 4rem;
+  }
+
+  #home .content p {
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.4rem;
+    text-align: center;
+  }
+
+  .btn {
+    max-width: 150px;
+    padding: 8px 15px;
+    font-size: 1.15rem;
+    margin-top: 10px;
+  }
+
+  .profile {
+    width: 300px;
+    height: 300px;
+  }
+
+  #services,
+  #portfolio,
+  #contact {
+    padding: 100px 50px;
+  }
+
+  #services .section-text h2 {
+    font-size: 1.25rem;
+  }
+
+  #services .section-text p {
+    max-width: 500px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #services .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  #portfolio .section-text h2 {
+    font-size: 1.25rem;
+  }
+
+  #portfolio .section-text p {
+    max-width: 500px;
+    font-size: 1rem;
+  }
+
+  #portfolio .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  #portfolio .content .image-box {
+    height: 200px;
+  }
+
+  #contact .section-text h2 {
+    font-size: 1.25rem;
+  }
+
+  #contact .section-text p {
+    max-width: 500px;
+    font-size: 1rem;
+  }
+
+  #contact .content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .menu-toggle {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .menu-toggle::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-10px);
+    transform: 0.5s;
+    box-shadow: 0 10px #fff;
+  }
+
+  .menu-toggle::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(10px);
+    transform: 0.5s;
+  }
+
+  header.active .menu-toggle::before {
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 #fff;
+  }
+
+  header.active .menu-toggle::after {
+    transform: translateY(0px) rotate(315deg);
+  }
+
+  header.active nav {
+    position: fixed;
+    width: 100%;
+    height: calc(100vh - 68.4px);
+    background-color: rgba(50, 50, 50, 0.95);
+    left: 0;
+    top: 68.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+  }
+
+  header.active nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    display: none;
+  }
+}

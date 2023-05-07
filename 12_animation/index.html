@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <!-- <link rel="stylesheet" href="css/main.css" /> -->
+
+    <style>
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .outer-square {
+        width: 250px;
+        height: 250px;
+        border: 1px solid #ccc;
+        display: grid;
+        place-content: center;
+      }
+
+      .square {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .square:first-child {
+        background-color: red;
+        /* transform: translateX(-50px); */
+        /* transform: translateY(50px); */
+        /* transform: translate(-50px, -50px) */
+
+        /* transform: rotateX(50deg); */
+        /* transform: rotateY(50deg); */
+        /* transform: rotate(-4deg); */
+
+        /* transform: skewX(45deg); */
+        /* transform: skewY(45deg); */
+        /* transform: skewZ(45deg); */
+      }
+
+      .square:nth-child(2) {
+        background-color: midnightblue;
+      }
+
+      .square:nth-child(2):hover {
+        background-color: blueviolet;
+        border: 5px solid royalblue;
+        /* transition-property: background-color, border;
+        transition-delay: 0.2s, 0.5s;
+        transition-duration: 0.2s,0.5s ;
+        transition-timing-function: linear; */
+
+        transition: all 2s linear 0.5s;
+      }
+
+      .square:nth-child(3) {
+        background-color: bisque;
+      }
+
+      .animate {
+        animation-name: slider;
+        animation-duration: 5s;
+        animation-fill-mode: both;
+        animation-iteration-count: 5;
+        animation-direction: alternate;
+        /* animation-timing-function: 1s;
+        animation-direction: normal;
+        animation-iteration-count: 3;
+        animation-fill-mode: backwards; */
+      }
+
+      @keyframes slider {
+        0% {
+          transform: translateX(0) rotate(0);
+        }
+
+        33% {
+          transform: translateX(300px) rotate(180deg)
+        }
+
+        66% {
+          transform: translateX(-300px) rotate(-180deg)
+        }
+
+        100% {
+          transform: translateX(0) rotate(0);
+          background-color: aqua;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <main>
+      <div class="square">👨‍🚀</div>
+      <div class="square">🤳</div>
+      <div class="square animate">😊</div>
+    </main> -->
+
+    <main>
+      <div class="outer-square">
+        <div class="square">
+          <img
+            src="https://images.unsplash.com/photo-1661956602153-23384936a1d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="table"
+            width="150"
+            height="150"
+          />
+        </div>
+      </div>
+
+      <div class="square">
+        <img
+          src="https://images.unsplash.com/photo-1683289194638-cc26a0df737a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+          alt="bird"
+          width="150"
+          height="150"
+        />
+      </div>
+
+      <div class="square animate">
+        <img
+          src="https://images.unsplash.com/photo-1661956602139-ec64991b8b16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=365&q=80"
+          alt="bird"
+          width="150"
+          height="150"
+        />
+      </div>
+    </main>
+  </body>
+</html>

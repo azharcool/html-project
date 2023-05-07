@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+}
+
+.red-header {
+  background-color: red;
+}
+
+.blue-header {
+  background-color: royalblue;
+}
+
+.yellow-header {
+  background-color: yellow;
+  color: #000;
+}
+
+header,
+footer {
+  height: 100px;
+  color: #fff;
+  text-align: center;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  font-size: 3rem;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  background-color: #000;
+}
+
+footer a {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.social {
+  color: #fff;
+  background-color: rebeccapurple;
+  padding: 0.6rem;
+  position: fixed;
+  top: 30%;
+  right: 0;
+  z-index: 1;
+}
+
+a:visited {
+  color: #fff;
+}

@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap");
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 1px solid midnightblue;
+  display: flex;
+  /* row -> jc > left to right + ai > top to bottom*/
+  /* column ->  */
+  /* justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: center;
+  align-items: baseline; */
+
+  /* align-items: center; */
+  gap: 1rem;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  /* flex-flow: row wrap;
+  align-content: baseline;
+  align-content: flex-start;
+  align-content: flex-end;
+  align-content: center;
+  align-content: space-around;
+  align-content: space-between; */
+}
+
+.box {
+  /* min-width: 100px; */
+  min-height: 80px;
+  background-color: lightslategrey;
+  color: wheat;
+  font-size: 1rem;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-grow: 1;
+ flex-shrink: 1;
+}
+
+.box:nth-child(2){
+    flex-grow: 2;
+    flex-shrink: 2;
+}
